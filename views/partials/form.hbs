@@ -1,0 +1,38 @@
+
+<div class="row">
+  <div class="input-field col s6">
+    <input id="first_name" name="first_name" type="text" value="{{ users.first_name }}" class="validate">
+    <label for="first_name">First Name</label>
+  </div>
+  <div class="input-field col s6">
+    <input id="last_name" name="last_name" type="text" value="{{ users.last_name }}" class="validate">
+    <label for="last_name">Last Name</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s6">
+    <input id="email" name="email" type="email" value="{{ users.email }}" class="validate">
+    <label for="email">Email</label>
+    <span class="helper-text" data-error="wrong" data-success="right"></span>
+  </div>
+  <div class="input-field col s6">
+    <input id="phone" name="phone" type="number" value="{{ users.phone }}" class="validate">
+    <label for="phone">Phone</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s12">
+    <textarea id="comments" name="comments" type="text" class="materialize-textarea">{{ users.comments }}</textarea>
+    <label for="comments">Comments</label>
+  </div>
+<div>
+
+<div >
+  <button class="btn blue-grey lighten-2 col s12 modal-trigger">Save
+  </button>
+
+  <button class="btn col s12 blue-grey lighten-2" type="reset">Clear
+  </button>
+</div>

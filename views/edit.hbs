@@ -1,0 +1,29 @@
+{{#if alert}}
+<div class="blue white-text sms">
+  <div class="text-sms row">{{alert}}
+    <i class="small material-icons right occult col push-s4">clear</i>
+  </div> 
+</div>
+{{/if}}
+
+<div class="row seccion">
+  <div class="col s12">
+    <div>
+      <a href="/" type="button">Home
+        <i class="tiny material-icons">mode_edit</i>/
+      </a>
+      <a href="/edit" type="button">Edit
+        <i class="tiny material-icons">home</i>
+      </a>
+    </div>
+    <div class="card blue-grey darken-1">  
+      <div class="card-content white-text"> 
+        {{#if users}}
+        <form action="/edit/{{users.id}}" method="post">
+            {{> form}}
+        </form>
+       {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
