@@ -1,7 +1,84 @@
-{{#if alert}}
-<div class="blue white-text sms">
-  <div class="text-sms row">{{alert}}
-    <i class="small material-icons right occult col push-s4">clear</i>
-  </div> 
-</div>
-{{/if}}
+<div class="row"> <!--Container Add-->
+
+  <div class="fullHeightRight  valign-wrapper"> <!--Main Add-->
+    <div class="col offset-s2 text-size-20">  <!--Work area--> 
+      {{#if users}}
+        <h2>{{ users.first_name }} {{ users.last_name }}</h2>
+      {{/if}}
+
+      <div class="row content">  <!--Content Table-->
+        <a href="/list">List
+          <i class="tiny material-icons"> list </i>
+        </a>
+        <a class="black-text">/</a>
+        <a class="black-text">View
+          <i class="tiny material-icons"> visibility </i>
+        </a>
+
+        <div class="row blue-grey white-text darken-1">  
+          {{#if users}}
+            <!--Id-->  
+            <div class="col s1 font-text-20 center">
+              <div class="col s12">
+                <p>Cod</p>
+              </div>
+              <div class="col s12"> 
+                <p>{{ users.id }}</p>
+              </div>
+            </div>
+            <!--First Name-->
+            <div class="col s2 font-text-20 center">
+              <div class="col s12">
+                <p>First Name</p>
+              </div>
+              <div class="col s12"> 
+                <p>{{ users.first_name }}</p>
+              </div>
+            </div>
+            <!--Last Name-->
+            <div class="col s2 font-text-20 center">
+              <div class="col s12">
+              <p>Last Name</p>
+              </div>
+              <div class="col s12">      
+              <p>{{ users.last_name }}</p>
+              </div>
+            </div>
+            <!--Email-->
+            <div class="col s3 font-text-20 center">
+              <div class="col s12">
+                <p>Email</p>
+              </div>
+              <div class="col s12"> 
+                <p>{{ users.email }}</p>
+              </div>
+            </div>
+            <!--Phone-->
+            <div class="col s2 font-text-20 center">
+              <div class="col s12">
+              <p>Phone</p>
+              </div>
+              <div class="col s12"> 
+                <p>{{ users.phone }}</p>
+              </div>
+            </div>  
+          {{/if}}
+        </div>
+
+        {{#if users}}
+          <div class="row font-text-20">
+            <div>
+              <b>Comments:</b>
+            </div>
+              
+            <div>
+              <b>{{ users.comments }}</b>
+            </div>
+          </div>
+        {{/if}}
+      </div> <!--End Content Table-->
+    </div> <!--End Work area-->  
+  </div> <!--End Main Add-->
+
+</div><!--End Container Add-->
+

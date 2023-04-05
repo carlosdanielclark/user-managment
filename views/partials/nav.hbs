@@ -1,35 +1,38 @@
-<nav class="nav-wrapper">
-  <div class="col push-s1 ">
-    <a href="/" class="brand-logo left">Users Managment</a>
-  </div>
+ <div class="row"> <!--Container-->
+  <nav class="nav-wrapper nav_footer_color_p1"> <!--Navbar-->
+  <!--LOGO-->
+  <a href="/" class="brand-logo left">Users Managment</a>
   
+    <!--HOME-->
+  <div class="buton_a_nav col s1 right center">
+    <a href='/' >
+      <i class="material-icons">home</i>
+    </a> 
+  </div>
 
-    <!--FORM SEARSH-->
-    <div class="nav-wrapper row right valign-wrapper">
-      <form action="/" method="post">
-          <div class="input-field col push-s2 s7 white">
-            <input id="search" name="search" type="search" required>
-          </div>
-          <div class="left col push-s2 s2">
-              <button class="btn_search"> 
-                <i class="medium material-icons">search</i>
-              </button>
-          </div> 
-            
+  <!--NAV SEARCH-->
+    <div class="nav-wrapper col s12 m5 l4 right">
+      <form action="/list" method="post">
+        <div class="input-field white col s10">
+          <input id="search" placeholder="Search User" name="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons close_search_bar">close</i>
+        </div> 
+        <div class="col s2 btn_f_nav center">
+          <button class="white-text">
+            <i class="material-icons">search</i></label>
+          </button> 
+        </div>
       </form>
     </div>
 
-  <!--HOME-->
-  <a href='/' class="right">
-    <i class="material-icons right">home</i>
-  </a>
+    <!-- MENU
+    <a class='dropdown-trigger right' href='#' data-target='dropdown1'>
+      <i class="material-icons">menu</i></a>
+    </a>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="/form">Form</a></li> 
+    </ul>  --> 
 
-  <!-- MENU
-  <a class='dropdown-trigger right' href='#' data-target='dropdown1'>
-    <i class="material-icons">menu</i></a>
-  </a>
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href="/form">Form</a></li> 
-  </ul>  -->    
-
-</nav>
+  </nav> <!--End Navbar-->
+</div> <!--End Container-->

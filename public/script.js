@@ -7,7 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
 const occult = document.querySelector('.occult');
 occult.addEventListener('click', (e)=>{
-  const sms = document.querySelector('.sms');
-  sms.setAttribute('class','hide');
+  close_sms();
 });
-  
+
+setTimeout((name)=>{
+  const sms = document.querySelector('.sms');
+  sms.classList.add('hide');
+}, 2500);
+
+const close_sms = ()=>{
+  const sms = document.querySelector('.sms');
+  sms.classList.add('hide');
+}

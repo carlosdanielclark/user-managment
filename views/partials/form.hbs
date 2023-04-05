@@ -1,38 +1,46 @@
 
-<div class="row">
+  <!--First Name-->
   <div class="input-field col s6">
+    <i class="material-icons prefix">person</i>
     <input id="first_name" name="first_name" type="text" value="{{ users.first_name }}" class="validate">
     <label for="first_name">First Name</label>
   </div>
+
+  <!--Last Name-->
   <div class="input-field col s6">
+    <i class="material-icons prefix">person</i>
     <input id="last_name" name="last_name" type="text" value="{{ users.last_name }}" class="validate">
     <label for="last_name">Last Name</label>
   </div>
-</div>
 
-<div class="row">
+  <!--Email-->
   <div class="input-field col s6">
+     <i class="material-icons prefix">email</i>
     <input id="email" name="email" type="email" value="{{ users.email }}" class="validate">
     <label for="email">Email</label>
     <span class="helper-text" data-error="wrong" data-success="right"></span>
   </div>
+
+  <!--Phone-->
   <div class="input-field col s6">
+    <i class="material-icons prefix">phone</i>
     <input id="phone" name="phone" type="number" value="{{ users.phone }}" class="validate">
     <label for="phone">Phone</label>
   </div>
-</div>
 
-<div class="row">
+  <!--Coments-->
   <div class="input-field col s12">
+    <i class="material-icons prefix">mode_edit</i>
     <textarea id="comments" name="comments" type="text" class="materialize-textarea">{{ users.comments }}</textarea>
     <label for="comments">Comments</label>
   </div>
-<div>
 
-<div >
-  <button class="btn blue-grey lighten-2 col s12 modal-trigger">Save
-  </button>
-
-  <button class="btn col s12 blue-grey lighten-2" type="reset">Clear
-  </button>
-</div>
+  <!--Buttons-->
+  <div class="row center">
+    <button class="btn waves-effect waves-light" >Add
+      <i class="material-icons">add</i>
+    </button>
+    <button class="btn red waves-effect waves-light disabled" type="clear">Clear
+      <i class="material-icons right">clear</i>
+    </button>
+  </div>

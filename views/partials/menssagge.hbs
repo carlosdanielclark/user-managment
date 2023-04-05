@@ -1,0 +1,24 @@
+
+{{#if alert}}
+  <div class="row blue white-text sms">
+    <div class="text-sms">{{alert}}
+        <i class="small material-icons right occult">clear</i>
+    </div> 
+  </div>
+{{/if}}
+ 
+{{#if removed}}
+  <div class="row blue white-text sms">
+    <div class="text-sms">User has been successfully removed. 
+        <i class="small material-icons right occult">clear</i>
+    </div>
+  </div>
+{{/if}}
+
+{{#if sms}}
+  <div class="row blue white-text sms">
+    <div class="text-sms">Update successful. 
+        <i class="small material-icons right occult">clear</i>
+    </div>
+  </div>
+{{/if}}

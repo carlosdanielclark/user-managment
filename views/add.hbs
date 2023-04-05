@@ -1,28 +1,44 @@
-{{#if alert}}
-<div class="blue white-text sms">
-  <div class="text-sms row">{{alert}}
-    <i class="small material-icons right occult col push-s4">clear</i>
-  </div> 
-</div>
-{{/if}}
+<div class="row"> <!--Container Add-->
 
-<div class="row seccion">
-  <div class="col s12">
-    <div>
-      <a href="/" type="button">Home
-        <i class="tiny material-icons">mode_edit</i>/
-      </a>
-      <a href="/add" type="button">Add
-        <i class="tiny material-icons">home</i>
-      </a>
-    </div>
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <form action="/add" method="post">
-          {{> form}}
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+  <div class="fullHeightLeft  valign-wrapper"> <!--Main Add-->
+    <div class="col offset-s3 text-size-20">  <!--Work area--> 
+      <div class="col s7"> <!--Form Add content-->
+
+        <!--Alert Add-->
+        <div class="row">
+          <div class="col s12">
+            {{#if alert}}
+              {{> menssagge}}
+            {{/if}}
+          </div>
+        </div>
+        
+        <!--Form Add Title-->
+        <h2 class="center">Add user</h2>
+
+        <!--Form Add Stiket-->
+        <div class="none">
+          <a href="/list" type="button">List
+            <i class="tiny material-icons"> list </i>
+          </a>
+          <a class="black-text">/</a>
+          <a class="black-text">Add
+            <i class="tiny material-icons"> mode_edit </i>
+          </a>
+        </div>
+
+        <!--Form Add-->
+        <div class="card">
+          <form action="/add" method="post">
+            {{> form}}
+          </form>
+          <p class="center">© Showing skills </p>
+        </div>
+
+      </div> <!--End Form content-->
+
+    </div> <!--End Work area-->  
+  </div> <!--End Main Add-->
+
+</div><!--End Container Add-->
 
