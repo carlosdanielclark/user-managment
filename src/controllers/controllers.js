@@ -34,11 +34,16 @@ controller.view = async (req, res)=>{
 //Create user
 controller.add_user = async (req, res)=>{
 	const { first_name, last_name, email, phone, comments } = req.body;
-	const user = {
-		first_name, last_name, email, phone, comments
-	};
-	await pool.query('INSERT INTO users SET ?', [user]);
-	res.render("add", {alert: 'User added successfully.' });
+  if(first_name=='' || last_name=='' || email=='' || phone==''){
+    res.render("add", {error: 'Error, fields empty.'});
+  }else{
+    const user = {
+      first_name, last_name, email, phone, comments
+    };
+    await pool.query('INSERT INTO users SET ?', [user]);
+    res.render("add", {alert: 'User added successfully.' });
+  }
+
 }
 //Delete user
 controller.del_user = async (req, res) => {
@@ -56,6 +61,7 @@ controller.search_user = async (req, res) => {
 //Edit user
 controller.update_user = async (req, res) => {
   const id = req.params.id;
+  console.log(id)
 	const { first_name, last_name, email, phone, comments } = req.body;
 	const users = {
 		first_name, last_name, email, phone, comments

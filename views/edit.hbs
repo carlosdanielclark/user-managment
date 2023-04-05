@@ -1,52 +1,50 @@
-<div class="row"> <!--Container Add-->
+<div class="row"> <!--Container Edit-->
 
-  <div class="fullHeightLeft  valign-wrapper"> <!--Main Add-->
+  <div class="fullHeightLeft  valign-wrapper"> <!--Main Edit-->
     <div class="col offset-s3 text-size-20">  <!--Work area--> 
-      <div class="col s7"> <!--Form Add content-->
+      <div class="col s7"> <!--Form Edit content-->
 
-        <!--Alert Add-->
+        <!--Alert Edit-->
         <div class="row">
           <div class="col s12">
             {{#if alert}}
               {{> menssagge}}
             {{/if}}
-            {{#if error}}
-              {{> menssagge}}
-            {{/if}}
           </div>
         </div>
         
-        <!--Form Add Title-->
-        <h2 class="center">Add user</h2>
+        <!--Form Edit Title-->
+        <h2 class="center">Edit user</h2>
 
-        <!--Form Add Stiket-->
+        <!--Form Edit Stiket-->
         <div class="none">
           <a href="/list" type="button">List
             <i class="tiny material-icons"> list </i>
           </a>
           <a class="black-text">/</a>
-          <a class="black-text">Add
-            <i class="tiny material-icons"> mode_edit </i>
+          <a class="black-text">Edit
+            <i class="tiny material-icons"> edit </i>
           </a>
         </div>
 
-        <!--Form Add-->
+        <!--Form Edit-->
         <div class="card">
-          <form action="/add" method="post">
-
+          {{#if users}}
+          <form action="/edit/{{users.id}}" method="post">
             {{> form}}
 
-             <!--Buttons-->
+            <!--Buttons-->
             <div class="row center">
-              <button class="btn waves-effect waves-light" >Add
-              <i class="material-icons">add</i>
+              <button class="btn waves-effect waves-light" >Update
+              <i class="material-icons">update</i>
               </button>
               <button class="btn red waves-effect waves-light disabled" type="clear">Clear
               <i class="material-icons right">clear</i>
               </button>
-            </div> 
-
+            </div>
+            
           </form>
+          {{/if}}
           <p class="center">© Showing skills </p>
         </div>
 
@@ -56,4 +54,3 @@
   </div> <!--End Main Add-->
 
 </div><!--End Container Add-->
-
